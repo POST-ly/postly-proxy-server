@@ -26,7 +26,9 @@ app.get("/proxy", (req, res) => {
         url,
         method: "GET"
     }).then(response => {
-        res.json(response.data);
+        res.status(response.status)
+            .contentType(response.headers["content-type"])
+            .send(response.data);
     }).catch(err => {
         res.status(500).json({ type: 'error', message: err.toString() });
     })
