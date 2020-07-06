@@ -1,5 +1,5 @@
 {
-  "name": "POSTly Proxy server",
+  "name": "postly-proxy-server",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
